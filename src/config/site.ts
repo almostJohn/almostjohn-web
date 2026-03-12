@@ -1,8 +1,8 @@
 export const siteConfig = {
-	name: "almostJohn",
+	name: "John Gale Garcia",
 	title: {
-		default: "almostJohn",
-		template: "almostJohn — %s",
+		default: "John Gale Garcia",
+		template: "John Gale Garcia — %s",
 	},
 	description: "My corner of the web — projects, ideas, and things I build.",
 	creator: "@almostJohn",
