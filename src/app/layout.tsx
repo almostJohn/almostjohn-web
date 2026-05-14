@@ -1,30 +1,46 @@
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import { cn } from "@/util/cn";
-import { ptSerif } from "@/util/fonts";
+import { inter } from "@/util/fonts";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
-import { Providers } from "./providers";
 
 export const metadata: Metadata = {
 	title: siteConfig.title,
 	description: siteConfig.description,
+	applicationName: siteConfig.name,
+
 	appleWebApp: {
 		title: siteConfig.name,
 	},
-	applicationName: siteConfig.name,
+
+	metadataBase: new URL(siteConfig.url),
+
+	keywords: [
+		"personal-website",
+		"almostjohn",
+		"john gale garcia",
+		"full stack web dev",
+	],
+	authors: [{ name: siteConfig.creator, url: siteConfig.url }],
+
 	openGraph: {
 		siteName: siteConfig.name,
 		type: "website",
 		title: siteConfig.title,
 		description: siteConfig.description,
 	},
+
 	twitter: {
 		card: "summary_large_image",
 		title: siteConfig.title,
 		description: siteConfig.description,
 		creator: siteConfig.creator,
 	},
+
+	creator: siteConfig.creator,
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -32,11 +48,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-neutral-100 text-neutral-900 antialiased dark:bg-neutral-900 dark:text-neutral-100",
-					ptSerif.className,
+					"bg-neutral-100 text-neutral-900 antialiased",
+					inter.className,
 				)}
 			>
-				<Providers>{children}</Providers>
+				<SiteHeader />
+				{children}
+				<SiteFooter />
 			</body>
 		</html>
 	);
