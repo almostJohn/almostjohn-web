@@ -23,13 +23,13 @@ export default function HomePage() {
 				<div className="mt-6 flex w-full flex-col gap-3 md:flex-row">
 					<Link
 						href="/portfolio"
-						className="inline-flex h-9 shrink-0 items-center justify-center bg-neutral-900 px-3 py-2 text-base font-medium text-neutral-100 transition-colors"
+						className="inline-flex h-9 shrink-0 items-center justify-center bg-neutral-900 px-3 py-2 text-base font-semibold text-neutral-100 transition-colors"
 					>
 						View Portfolio
 					</Link>
 					<Link
 						href="/contact"
-						className="inline-flex h-9 shrink-0 items-center justify-center border border-neutral-300 px-3 py-2 text-base font-medium transition-colors hover:bg-neutral-200"
+						className="inline-flex h-9 shrink-0 items-center justify-center border border-neutral-300 px-3 py-2 text-base font-semibold transition-colors hover:bg-neutral-200"
 					>
 						Contact
 					</Link>
