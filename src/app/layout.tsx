@@ -26,6 +26,16 @@ export const metadata: Metadata = {
 	],
 	authors: [{ name: siteConfig.creator, url: siteConfig.url }],
 
+	icons: {
+		other: [
+			{
+				url: "/almostjohn-web-icon.png",
+				sizes: "32x32",
+				type: "image/png",
+			},
+		],
+	},
+
 	openGraph: {
 		siteName: siteConfig.name,
 		type: "website",

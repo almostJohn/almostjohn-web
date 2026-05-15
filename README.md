@@ -1,8 +1,8 @@
-# site
+# almostjohn-web
 
 > .
 
-This is my official website, no further information here, check out my [site](https://almostjohn.vercel.app/)
+This is my official website, no further information here, check out my [almostjohn-web](https://almostjohn.vercel.app/)
 
 ## Author
 
