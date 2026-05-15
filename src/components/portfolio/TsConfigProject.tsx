@@ -24,14 +24,16 @@ export function TsConfigProject() {
 					</div>
 					<div className="w-14" />
 				</div>
-				<div className="mt-auto rounded-b-md">
+				<div className="relative mt-auto h-[260px] w-full overflow-hidden rounded-b-md">
 					<Image
 						src="/tsconfig-web-image.png"
 						alt="TsConfigProjectImage"
-						width={500}
-						height={500}
 						priority
-						className="w-full rounded-b-md"
+						fill
+						sizes="(max-width: 768px) 100vw, 50vw"
+						placeholder="blur"
+						blurDataURL="/tsconfig-web-image.png"
+						className="rounded-b-md object-cover"
 					/>
 				</div>
 			</div>
