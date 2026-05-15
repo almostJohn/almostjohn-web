@@ -54,8 +54,8 @@ export function MobileNav() {
 								className={cn(
 									"inline-flex h-10 items-center justify-center px-4 py-2 text-lg font-medium whitespace-nowrap transition-colors",
 									pathname === item.href
-										? "text-sky-500 underline underline-offset-2"
-										: "underline-offset-2 hover:text-sky-500 hover:underline",
+										? "text-sky-500"
+										: "underline-offset-2 hover:text-sky-500",
 								)}
 								onClick={() => setInteracted(false)}
 							>
