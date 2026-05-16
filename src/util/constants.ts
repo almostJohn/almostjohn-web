@@ -21,6 +21,6 @@ export const SUBJECT_MAX_LENGTH = 32;
 export const SUBJECT_MIN_LENGTH = 2;
 
 export const MESSAGE_MAX_LENGTH = 350;
-export const MESSAGE_MIN_LENGHT = 2;
+export const MESSAGE_MIN_LENGTH = 2;
 
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

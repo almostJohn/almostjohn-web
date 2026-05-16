@@ -7,22 +7,11 @@ export function TsConfigProject() {
 	return (
 		<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 			<div className="flex flex-col rounded-md border border-neutral-200 shadow-lg">
-				<div className="flex h-16 items-center justify-between rounded-t-md border-b border-neutral-200 px-6 py-4">
-					<div className="flex items-center gap-2">
-						{Array.from({ length: 3 }).map((_, i) => (
-							<div
-								key={i + 1}
-								className="inline-flex size-3 shrink-0 items-center justify-center rounded-full bg-neutral-500"
-							/>
-						))}
+				<div className="flex items-center justify-center rounded-t-md border-b border-neutral-200 px-6 py-3">
+					<div className="pointer-events-none inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-neutral-200 px-2 py-0.5 text-xs font-medium whitespace-nowrap select-none">
+						<Lock className="size-3 shrink-0" />
+						<span>{projectInfo.tsConfigWeb.url.live}</span>
 					</div>
-					<div className="flex items-center justify-center">
-						<div className="pointer-events-none inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-neutral-200 p-2 text-xs font-medium whitespace-nowrap select-none">
-							<Lock className="size-3 shrink-0" />
-							<span>{projectInfo.tsConfigWeb.url.live}</span>
-						</div>
-					</div>
-					<div className="w-14" />
 				</div>
 				<div className="relative mt-auto h-[260px] w-full overflow-hidden rounded-b-md">
 					<Image
