@@ -5,7 +5,7 @@ import { MessageType } from "@/types";
 import {
 	EMAIL_REGEX,
 	MESSAGE_MAX_LENGTH,
-	MESSAGE_MIN_LENGHT,
+	MESSAGE_MIN_LENGTH,
 	NAME_MAX_LENGTH,
 	NAME_MIN_LENGTH,
 	SUBJECT_MAX_LENGTH,
@@ -63,7 +63,7 @@ export async function sendEmail(_: unknown, form: FormData) {
 
 		if (
 			typeof message !== "string" ||
-			message.length < MESSAGE_MIN_LENGHT ||
+			message.length < MESSAGE_MIN_LENGTH ||
 			message.length > MESSAGE_MAX_LENGTH
 		) {
 			return {
