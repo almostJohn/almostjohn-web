@@ -1,5 +1,5 @@
-import { TsConfigProject } from "@/components/portfolio/TsConfigProject";
-import { VoxlyProject } from "@/components/portfolio/VoxlyProject";
+import { ProjectSection } from "@/components/portfolio/ProjectSection";
+import { projectInfo } from "@/util/constants";
 
 export const metadata = {
 	title: "Portfolio",
@@ -15,8 +15,24 @@ export default function PortfolioPage() {
 					I've made.
 				</p>
 				<div className="mt-10 flex flex-col gap-8">
-					<VoxlyProject />
-					<TsConfigProject />
+					<ProjectSection
+						projectTitle={projectInfo.voxlyWeb.title}
+						projectDescription={projectInfo.voxlyWeb.description}
+						projectTech={projectInfo.voxlyWeb.tech}
+						projectUrl={projectInfo.voxlyWeb.url}
+						projectImagePath="/voxly-web-image.png"
+						projectImageAlt="VoxlyProjectImage"
+						className="flex-col-reverse md:flex-row-reverse"
+					/>
+					<ProjectSection
+						projectTitle={projectInfo.tsConfigWeb.title}
+						projectDescription={projectInfo.tsConfigWeb.description}
+						projectTech={projectInfo.tsConfigWeb.tech}
+						projectUrl={projectInfo.tsConfigWeb.url}
+						projectImagePath="/tsconfig-web-image.png"
+						projectImageAlt="TsConfigProjectImage"
+						className="flex-col-reverse"
+					/>
 				</div>
 			</div>
 		</div>
