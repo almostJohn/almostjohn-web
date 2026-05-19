@@ -31,8 +31,8 @@ export function MainNav() {
 					className={cn(
 						"text-base font-medium whitespace-nowrap transition-colors",
 						pathname === item.href
-							? "text-sky-500"
-							: "underline-offset-2 hover:text-sky-500",
+							? "text-blue-600"
+							: "underline-offset-2 hover:text-blue-600",
 					)}
 				>
 					{item.label}

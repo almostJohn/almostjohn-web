@@ -36,7 +36,7 @@ export function MobileNav() {
 	return (
 		<Drawer open={interacted} onOpenChange={setInteracted}>
 			<DrawerTrigger asChild>
-				<button className="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center p-2 transition-colors hover:text-sky-500 md:hidden">
+				<button className="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center p-2 transition-colors hover:text-blue-600 md:hidden">
 					<Icons.Menu className="size-6 shrink-0" />
 				</button>
 			</DrawerTrigger>
@@ -54,8 +54,8 @@ export function MobileNav() {
 								className={cn(
 									"inline-flex h-10 items-center justify-center px-4 py-2 text-lg font-medium whitespace-nowrap transition-colors",
 									pathname === item.href
-										? "text-sky-500"
-										: "underline-offset-2 hover:text-sky-500",
+										? "text-blue-600"
+										: "hover:text-blue-600",
 								)}
 								onClick={() => setInteracted(false)}
 							>
