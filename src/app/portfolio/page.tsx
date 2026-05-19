@@ -1,4 +1,5 @@
 import { TsConfigProject } from "@/components/portfolio/TsConfigProject";
+import { VoxlyProject } from "@/components/portfolio/VoxlyProject";
 
 export const metadata = {
 	title: "Portfolio",
@@ -13,7 +14,8 @@ export default function PortfolioPage() {
 					Take a look at some of my projects I've worked on, and the websites
 					I've made.
 				</p>
-				<div className="mt-10 flex flex-col gap-4">
+				<div className="mt-10 flex flex-col gap-8">
+					<VoxlyProject />
 					<TsConfigProject />
 				</div>
 			</div>

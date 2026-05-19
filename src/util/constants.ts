@@ -1,4 +1,20 @@
 export const projectInfo = {
+	voxlyWeb: {
+		title: "voxly-web",
+		description:
+			"Write a letter to anyone, anonymously or not. No sign-up required. Voxly is a free, open space for letters that deserve to be written.",
+		url: {
+			live: "https://app-voxly.vercel.app",
+		},
+		tech: [
+			"next.js",
+			"react",
+			"tailwindcss",
+			"typescript",
+			"postgresql",
+			"neon db",
+		],
+	},
 	tsConfigWeb: {
 		title: "ts-config-web",
 		description:
