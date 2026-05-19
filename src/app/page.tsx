@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HomePage() {
 	return (
-		<div className="mx-auto flex min-h-[calc(100vh-72px)] max-w-5xl flex-col px-6 pt-24 sm:px-4">
+		<div className="mx-auto flex min-h-[calc(100vh-72px)] max-w-5xl flex-col justify-center p-6 sm:p-4">
 			<div className="mt-3 flex flex-col justify-center">
 				<h1 className="text-6xl leading-tight font-bold">
 					Hey, I'm <span className="text-sky-500">{NAME}</span>!

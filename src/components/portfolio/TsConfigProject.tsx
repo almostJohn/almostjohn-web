@@ -5,28 +5,8 @@ import Image from "next/image";
 
 export function TsConfigProject() {
 	return (
-		<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-			<div className="flex flex-col rounded-md border border-neutral-200 shadow-lg">
-				<div className="flex items-center justify-center rounded-t-md border-b border-neutral-200 px-6 py-3">
-					<div className="pointer-events-none inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-neutral-200 px-2 py-0.5 text-xs font-medium whitespace-nowrap select-none">
-						<Lock className="size-3 shrink-0" />
-						<span>{projectInfo.tsConfigWeb.url.live}</span>
-					</div>
-				</div>
-				<div className="relative mt-auto h-[260px] w-full overflow-hidden rounded-b-md">
-					<Image
-						src="/tsconfig-web-image.png"
-						alt="TsConfigProjectImage"
-						priority
-						fill
-						sizes="(max-width: 768px) 100vw, 50vw"
-						placeholder="blur"
-						blurDataURL="/tsconfig-web-image.png"
-						className="rounded-b-md object-cover"
-					/>
-				</div>
-			</div>
-			<div className="flex flex-col justify-center">
+		<div className="flex flex-col-reverse gap-6 md:flex-row md:items-center">
+			<div className="flex flex-1 flex-col justify-center">
 				<h1 className="text-3xl font-bold underline decoration-sky-500 underline-offset-2">
 					{projectInfo.tsConfigWeb.title}
 				</h1>
@@ -61,6 +41,27 @@ export function TsConfigProject() {
 					>
 						Source <GitHubIcon className="size-4 shrink-0" />
 					</a>
+				</div>
+			</div>
+			<div className="flex flex-1 flex-col rounded-md border border-neutral-200 shadow-lg">
+				<div className="flex items-center justify-center rounded-t-md border-b border-neutral-200 px-6 py-3">
+					<div className="pointer-events-none inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-neutral-200 px-2 py-0.5 text-xs font-medium whitespace-nowrap select-none">
+						<Lock className="size-3 shrink-0" />
+						<span>{projectInfo.tsConfigWeb.url.live}</span>
+					</div>
+				</div>
+				<div className="relative mt-auto w-full overflow-hidden rounded-b-md">
+					<Image
+						src="/tsconfig-web-image.png"
+						alt="TsConfigProjectImage"
+						priority
+						width={800}
+						height={450}
+						sizes="(max-width: 768px) 100vw, 50vw"
+						placeholder="blur"
+						blurDataURL="/tsconfig-web-image.png"
+						className="h-auto w-full rounded-b-md"
+					/>
 				</div>
 			</div>
 		</div>
