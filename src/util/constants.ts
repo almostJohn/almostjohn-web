@@ -16,7 +16,7 @@ export const projectInfo = {
 		],
 	},
 	tsConfigWeb: {
-		title: "ts-config-web",
+		title: "tsconfig-web",
 		description:
 			"Generate clean, opinionated tsconfig.json setups for modern TypeScript projects.",
 		url: {
