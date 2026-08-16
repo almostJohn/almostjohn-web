@@ -1,4 +1,3 @@
-import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
@@ -58,13 +57,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-neutral-100 text-neutral-900 antialiased",
+					"bg-neutral-50 text-sm text-neutral-950 antialiased",
 					inter.className,
 				)}
 			>
-				<SiteHeader />
-				{children}
-				<SiteFooter />
+				<main className="flex max-w-xl flex-col gap-8 p-6 md:p-8">
+					<SiteHeader />
+					{children}
+				</main>
 			</body>
 		</html>
 	);

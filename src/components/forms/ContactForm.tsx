@@ -2,7 +2,6 @@
 
 import { sendEmail } from "@/actions/EmailActions";
 import { MessageType } from "@/types";
-import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
 
@@ -10,6 +9,7 @@ export function ContactForm() {
 	const router = useRouter();
 	const [errorResponse, setErrorResponse] = useState("");
 	const [successResponse, setSuccessResponse] = useState("");
+	const [message, setMessage] = useState("");
 	const [state, formAction, isPending] = useActionState(sendEmail, null);
 
 	useEffect(() => {
@@ -19,79 +19,91 @@ export function ContactForm() {
 			setErrorResponse(state.message);
 		} else if (state.type === MessageType.Success) {
 			setSuccessResponse(state.message);
+			setMessage("");
 			router.refresh();
 		}
 	}, [state]);
 
 	return (
-		<form action={formAction} className="flex flex-col gap-4">
-			<div className="grid gap-2">
-				<label htmlFor="name" className="text-base font-semibold">
-					Name
-				</label>
-				<input
-					type="text"
-					id="name"
-					name="name"
-					autoComplete="off"
-					className="inline-flex items-center border-b-2 border-neutral-900 p-3 text-base transition-colors placeholder:text-neutral-500 hover:bg-neutral-200 focus:bg-neutral-200 focus:ring-0 focus:outline-none sm:text-sm"
-				/>
+		<form
+			action={formAction}
+			className="flex flex-col gap-4 bg-neutral-200/60 p-6"
+		>
+			<h2 className="text-lg font-semibold tracking-tight underline underline-offset-4">
+				Get in Touch
+			</h2>
+			<div className="flex w-full flex-col gap-2">
+				<div className="grid gap-2">
+					<label htmlFor="name" className="sr-only">
+						Name
+					</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						autoComplete="off"
+						className="inline-flex items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						placeholder="Name"
+						required
+					/>
+				</div>
+				<div className="grid gap-2">
+					<label htmlFor="email" className="sr-only">
+						Email Address
+					</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						autoComplete="off"
+						className="inline-flex items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						required
+						placeholder="Email"
+					/>
+				</div>
+				<div className="grid gap-2">
+					<label htmlFor="subject" className="sr-only">
+						Subject
+					</label>
+					<input
+						type="text"
+						id="subject"
+						name="subject"
+						autoComplete="off"
+						className="inline-flex items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						required
+						placeholder="Subject"
+					/>
+				</div>
+				<div className="grid gap-2">
+					<label htmlFor="message" className="sr-only">
+						Your Message
+					</label>
+					<textarea
+						name="message"
+						id="message"
+						className="inline-flex h-20 resize-none items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						rows={4}
+						maxLength={200}
+						required
+						placeholder="Your message"
+						value={message}
+						onChange={(e) => setMessage(e.target.value)}
+					/>
+				</div>
 			</div>
-			<div className="grid gap-2">
-				<label htmlFor="email" className="text-base font-semibold">
-					Email Address
-				</label>
-				<input
-					type="email"
-					id="email"
-					name="email"
-					autoComplete="off"
-					className="inline-flex items-center border-b-2 border-neutral-900 p-3 text-base transition-colors placeholder:text-neutral-500 hover:bg-neutral-200 focus:bg-neutral-200 focus:ring-0 focus:outline-none sm:text-sm"
-				/>
-			</div>
-			<div className="grid gap-2">
-				<label htmlFor="subject" className="text-base font-semibold">
-					Subject
-				</label>
-				<input
-					type="text"
-					id="subject"
-					name="subject"
-					autoComplete="off"
-					className="inline-flex items-center border-b-2 border-neutral-900 p-3 text-base transition-colors placeholder:text-neutral-500 hover:bg-neutral-200 focus:bg-neutral-200 focus:ring-0 focus:outline-none sm:text-sm"
-				/>
-			</div>
-			<div className="grid gap-2">
-				<label htmlFor="message" className="text-base font-semibold">
-					Your Message
-				</label>
-				<textarea
-					name="message"
-					id="message"
-					className="inline-flex items-center border-b-2 border-neutral-900 p-3 text-base transition-colors placeholder:text-neutral-500 hover:bg-neutral-200 focus:bg-neutral-200 focus:ring-0 focus:outline-none sm:text-sm"
-					rows={4}
-				/>
-			</div>
-			<div className="flex items-center justify-start">
+			<div className="flex items-center justify-end">
 				<button
 					type="submit"
-					disabled={isPending}
-					className="px- inline-flex h-9 cursor-pointer items-center justify-center bg-neutral-900 px-4 py-2 text-base font-semibold text-neutral-100 transition-colors hover:bg-neutral-900/90 disabled:pointer-events-none disabled:opacity-50"
+					disabled={isPending || !message.trim()}
+					className="inline-flex cursor-pointer items-center justify-center border border-neutral-400 bg-neutral-300 px-2 py-1 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
 				>
-					{isPending ? (
-						<>
-							<Loader2 className="size-4 shrink-0 animate-spin" />
-						</>
-					) : (
-						"Send Message"
-					)}
+					{isPending ? "Sending..." : "Send Message"}
 				</button>
 			</div>
-			{errorResponse && (
-				<p className="text-base text-red-500">{errorResponse}</p>
-			)}
+			{errorResponse && <p className="text-sm text-red-500">{errorResponse}</p>}
 			{successResponse && (
-				<p className="text-base text-green-500">{successResponse}</p>
+				<p className="text-sm text-emerald-500">{successResponse}</p>
 			)}
 		</form>
 	);

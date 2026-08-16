@@ -1,18 +1,29 @@
 import Link from "next/link";
-import { Icons } from "./Icons";
-import { MainNav } from "./MainNav";
-import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
 	return (
-		<header className="sticky top-0 z-50 w-full bg-neutral-100/95 backdrop-blur-xl supports-backdrop-filter:bg-neutral-100/60">
-			<div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6 sm:px-4">
-				<Link href="/">
-					<Icons.CurlyBrackets className="size-9 shrink-0 transition-colors hover:text-blue-600" />
-				</Link>
-				<MainNav />
-				<MobileNav />
-			</div>
+		<header className="flex items-center gap-2 text-sm font-medium">
+			<Link href="/" className="underline underline-offset-4">
+				almostjohn
+			</Link>
+			/
+			<a
+				href="https://facebook.com/alsojohn01"
+				rel="noreferrer"
+				target="_blank"
+				className="underline underline-offset-4"
+			>
+				facebook
+			</a>
+			/
+			<a
+				href="https://github.com/almostJohn"
+				rel="noreferrer"
+				target="_blank"
+				className="underline underline-offset-4"
+			>
+				github
+			</a>
 		</header>
 	);
 }
