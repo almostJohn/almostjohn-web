@@ -1,4 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility scrollbar-hidden {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	overflow-y: scroll;
+	scrollbar-gutter: stable;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

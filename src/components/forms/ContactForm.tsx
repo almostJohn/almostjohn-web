@@ -25,13 +25,7 @@ export function ContactForm() {
 	}, [state]);
 
 	return (
-		<form
-			action={formAction}
-			className="flex flex-col gap-4 bg-neutral-200/60 p-6"
-		>
-			<h2 className="text-lg font-semibold tracking-tight underline underline-offset-4">
-				Get in Touch
-			</h2>
+		<form action={formAction} className="flex flex-col gap-4">
 			<div className="flex w-full flex-col gap-2">
 				<div className="grid gap-2">
 					<label htmlFor="name" className="sr-only">
@@ -42,7 +36,7 @@ export function ContactForm() {
 						id="name"
 						name="name"
 						autoComplete="off"
-						className="inline-flex items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						className="inline-flex h-9 items-center rounded-md border border-neutral-800 px-3 py-2 transition-all placeholder:text-sm focus:border-neutral-700 focus:bg-neutral-800 focus:ring-0 focus:outline-none"
 						placeholder="Name"
 						required
 					/>
@@ -56,7 +50,7 @@ export function ContactForm() {
 						id="email"
 						name="email"
 						autoComplete="off"
-						className="inline-flex items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						className="inline-flex h-9 items-center rounded-md border border-neutral-800 px-3 py-2 transition-all placeholder:text-sm focus:border-neutral-700 focus:bg-neutral-800 focus:ring-0 focus:outline-none"
 						required
 						placeholder="Email"
 					/>
@@ -70,7 +64,7 @@ export function ContactForm() {
 						id="subject"
 						name="subject"
 						autoComplete="off"
-						className="inline-flex items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						className="inline-flex h-9 items-center rounded-md border border-neutral-800 px-3 py-2 transition-all placeholder:text-sm focus:border-neutral-700 focus:bg-neutral-800 focus:ring-0 focus:outline-none"
 						required
 						placeholder="Subject"
 					/>
@@ -82,7 +76,7 @@ export function ContactForm() {
 					<textarea
 						name="message"
 						id="message"
-						className="inline-flex h-20 resize-none items-center rounded-none border border-neutral-300 bg-white px-2 py-1"
+						className="inline-flex h-18 resize-none items-center rounded-md border border-neutral-800 px-3 py-2 transition-all placeholder:text-sm focus:border-neutral-700 focus:bg-neutral-800 focus:ring-0 focus:outline-none"
 						rows={4}
 						maxLength={200}
 						required
@@ -92,11 +86,11 @@ export function ContactForm() {
 					/>
 				</div>
 			</div>
-			<div className="flex items-center justify-end">
+			<div className="-mt-1 flex items-center justify-start">
 				<button
 					type="submit"
 					disabled={isPending || !message.trim()}
-					className="inline-flex cursor-pointer items-center justify-center border border-neutral-400 bg-neutral-300 px-2 py-1 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
+					className="inline-flex h-9 cursor-pointer items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white disabled:pointer-events-none disabled:opacity-50"
 				>
 					{isPending ? "Sending..." : "Send Message"}
 				</button>
