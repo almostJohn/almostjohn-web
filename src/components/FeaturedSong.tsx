@@ -59,7 +59,7 @@ export function FeaturedSong({ trackUrl }: FeaturedSongProps) {
 
 	if (isLoading) {
 		return (
-			<div className="flex animate-pulse items-center justify-between gap-2 rounded-md bg-neutral-800 p-2">
+			<div className="flex animate-pulse items-center justify-between gap-2 rounded-md bg-neutral-800 p-3">
 				<div className="flex items-center gap-2">
 					<div className="size-8 shrink-0 animate-pulse rounded-md bg-neutral-900" />
 					<div className="flex flex-col gap-1">

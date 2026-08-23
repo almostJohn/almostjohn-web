@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/util/cn";
-import { Globe } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { ContactForm } from "./forms/ContactForm";
 
@@ -76,7 +76,7 @@ export function TabSection() {
 				</div>
 				{activeTab === "projects" && (
 					<div className="scrollbar-hidden flex h-68 flex-col gap-3 overflow-y-auto pr-1">
-						<h2 className="text-xl font-medium tracking-tight">
+						<h2 className="text-lg font-medium tracking-tight md:text-xl">
 							Things I've Made
 						</h2>
 						{projects.map((project) => (
@@ -85,11 +85,8 @@ export function TabSection() {
 								href={project.href}
 								rel="noreferrer"
 								target="_blank"
-								className="group flex items-center gap-3 rounded-md border border-neutral-700 p-4 transition-colors hover:bg-neutral-800"
+								className="group flex items-start justify-between gap-3 rounded-md border border-neutral-700 p-4 transition-colors hover:bg-neutral-800"
 							>
-								<div className="inline-flex items-center justify-center rounded-md bg-neutral-600 p-2">
-									<Globe className="size-5 shrink-0 text-neutral-300" />
-								</div>
 								<div className="flex min-w-0 flex-col">
 									<div className="text-lg font-bold text-blue-500 group-hover:underline">
 										{project.title}
@@ -98,13 +95,14 @@ export function TabSection() {
 										{project.description}
 									</div>
 								</div>
+								<ArrowUpRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
 							</a>
 						))}
 					</div>
 				)}
 				{activeTab === "interests" && (
 					<div className="scrollbar-hidden flex h-68 flex-col gap-3 overflow-y-auto pr-1">
-						<h2 className="text-xl font-medium tracking-tight">
+						<h2 className="text-lg font-medium tracking-tight md:text-xl">
 							Beyond The Code
 						</h2>
 						<div className="flex items-center justify-center rounded-md border-2 border-dashed border-neutral-800 p-10 text-center">
@@ -114,7 +112,9 @@ export function TabSection() {
 				)}
 				{activeTab === "gallery" && (
 					<div className="scrollbar-hidden flex h-68 flex-col gap-3 overflow-y-auto pr-1">
-						<h2 className="text-xl font-medium tracking-tight">A Few Frames</h2>
+						<h2 className="text-lg font-medium tracking-tight md:text-xl">
+							A Few Frames
+						</h2>
 						<div className="flex items-center justify-center rounded-md border-2 border-dashed border-neutral-800 p-10 text-center">
 							<p className="text-sm text-neutral-500">Coming Soon</p>
 						</div>
@@ -122,7 +122,9 @@ export function TabSection() {
 				)}
 				{activeTab === "contact" && (
 					<div className="scrollbar-hidden flex h-68 flex-col gap-3 overflow-y-auto pr-1">
-						<h2 className="text-xl font-medium tracking-tight">Say Hello</h2>
+						<h2 className="text-lg font-medium tracking-tight md:text-xl">
+							Say Hello
+						</h2>
 						<div className="w-full md:max-w-sm">
 							<ContactForm />
 						</div>
