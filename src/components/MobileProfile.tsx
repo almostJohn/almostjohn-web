@@ -79,7 +79,7 @@ export function MobileProfile({
 			<SheetTrigger asChild>
 				<button
 					type="button"
-					className="group border-r-none inline-flex h-9 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full rounded-r-none border-t border-b border-l border-neutral-700 px-6 py-3 text-sm font-medium whitespace-nowrap hover:bg-neutral-800"
+					className="group border-r-none inline-flex h-9 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full rounded-r-none border-t border-b border-l border-neutral-700 px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors hover:bg-neutral-800"
 				>
 					<Icons.Menu className="size-6 shrink-0" />
 					Profile
@@ -87,7 +87,7 @@ export function MobileProfile({
 			</SheetTrigger>
 			<SheetContent
 				side="right"
-				className="rounded-none border-l border-l-neutral-800 bg-neutral-900"
+				className="w-full rounded-none border-l border-l-neutral-800 bg-neutral-900 sm:max-w-xl"
 			>
 				<SheetHeader>
 					<VisuallyHidden>
@@ -95,7 +95,7 @@ export function MobileProfile({
 						<SheetDescription>Hidden Description</SheetDescription>
 					</VisuallyHidden>
 				</SheetHeader>
-				<div className="-mt-5 flex flex-col gap-6 p-6 pt-0">
+				<div className="-mt-7 flex flex-col gap-6 p-4 pt-0">
 					<div className="relative h-26 w-full">
 						<div className="size-full rounded-md bg-linear-to-br from-blue-500 via-blue-300 to-blue-500" />
 					</div>

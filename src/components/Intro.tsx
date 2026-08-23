@@ -1,6 +1,6 @@
 export function Intro() {
 	return (
-		<div className="mt-3 flex flex-col gap-2 md:mt-0">
+		<div className="flex flex-col gap-2">
 			<h1 className="text-2xl font-bold">
 				👋 Hey, I'm <span className="text-blue-500">John</span>!
 			</h1>
