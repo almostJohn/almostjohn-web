@@ -87,7 +87,7 @@ export function MobileProfile({
 			</SheetTrigger>
 			<SheetContent
 				side="right"
-				className="w-full rounded-none border-l border-l-neutral-800 bg-neutral-900 sm:max-w-xl"
+				className="flex w-full flex-col rounded-none border-l border-l-neutral-800 bg-neutral-900 sm:max-w-xl"
 			>
 				<SheetHeader>
 					<VisuallyHidden>
@@ -95,7 +95,7 @@ export function MobileProfile({
 						<SheetDescription>Hidden Description</SheetDescription>
 					</VisuallyHidden>
 				</SheetHeader>
-				<div className="-mt-7 flex flex-col gap-6 p-4 pt-0">
+				<div className="-mt-7 flex min-h-0 flex-1 flex-col gap-6 p-4 pt-0">
 					<div className="relative h-26 w-full">
 						<div className="size-full rounded-md bg-linear-to-br from-blue-500 via-blue-300 to-blue-500" />
 					</div>
@@ -124,7 +124,7 @@ export function MobileProfile({
 							<FeaturedSong trackUrl={SPOTIFY_TRACK_URL} />
 						</div>
 					</div>
-					<div className="scrollbar-hidden -mt-2 flex h-68 flex-col gap-4 overflow-y-auto px-1">
+					<div className="scrollbar-hidden -mt-2 flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-1">
 						<span className="text-xs font-semibold tracking-wide text-neutral-500 uppercase">
 							Personal Details
 						</span>
