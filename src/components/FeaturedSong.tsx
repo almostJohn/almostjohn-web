@@ -1,6 +1,6 @@
 "use client";
 
-import { Music2 } from "lucide-react";
+import { Music4 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -99,8 +99,8 @@ export function FeaturedSong({ trackUrl }: FeaturedSongProps) {
 					<p className="truncate text-sm font-medium">{track.title}</p>
 				</div>
 			</div>
-			<div className="flex items-center justify-end pr-1">
-				<Music2 className="size-4 shrink-0 text-neutral-400" />
+			<div className="flex items-center justify-end pr-2">
+				<Music4 className="size-4 shrink-0 text-neutral-400" />
 			</div>
 		</a>
 	);
