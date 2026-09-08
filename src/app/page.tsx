@@ -20,13 +20,11 @@ export default function HomePage() {
 								</div>
 							</div>
 							<Profile
-								name="John Gale Garcia"
+								displayName="John"
+								username="almostjohn"
 								avatarUrl="https://github.com/almostJohn.png"
 								pronouns="he/him"
 								role="Software Engineer"
-								birthdate="September 25, 2000"
-								livesIn="Lives in Olongapo City"
-								hometown="From Malolos, Bulacan"
 							/>
 						</div>
 					</div>
@@ -36,13 +34,11 @@ export default function HomePage() {
 						<div className="relative flex w-full flex-col overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 p-4">
 							<div className="absolute top-3 right-0">
 								<MobileProfile
-									name="John Gale Garcia"
+									displayName="John"
+									username="almostjohn"
 									avatarUrl="https://github.com/almostJohn.png"
 									pronouns="he/him"
 									role="Software Engineer"
-									birthdate="September 25, 2000"
-									livesIn="Lives in Olongapo City"
-									hometown="From Malolos, Bulacan"
 								/>
 							</div>
 							<div className="flex flex-col gap-6">
