@@ -41,15 +41,18 @@ export function DetailsSection({
 							href={item.href}
 							rel="noreferrer"
 							target="_blank"
-							className="group flex cursor-pointer items-center justify-between gap-2.5 rounded-md border border-neutral-700 px-3 py-2 hover:bg-neutral-800"
+							className="group flex cursor-pointer items-center justify-between gap-2.5 rounded-md border border-neutral-700 px-3 py-2 transition-all hover:scale-105 hover:bg-neutral-800"
 						>
-							<div className="flex items-center gap-2.5">
-								<div>{item.icon}</div>
+							<div className="flex flex-1 items-center">{item.icon}</div>
+							<div className="flex items-center justify-center">
 								<p className="text-sm text-neutral-500 transition-colors group-hover:text-neutral-100">
 									{item.label}
 								</p>
 							</div>
-							<ArrowUpRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+							<div className="flex flex-1 justify-end">
+								<ArrowUpRight className="block size-4 shrink-0 md:hidden" />
+								<ArrowUpRight className="hidden size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100 md:block" />
+							</div>
 						</a>
 					);
 				})}

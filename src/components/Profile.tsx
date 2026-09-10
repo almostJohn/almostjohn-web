@@ -113,10 +113,10 @@ export function Profile({
 	];
 
 	return (
-		<div className="hidden h-full w-full flex-col overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 p-4 md:flex md:max-w-xs">
+		<div className="hidden h-full w-full flex-col rounded-md border border-neutral-700 bg-neutral-900 p-4 md:flex md:max-w-xs">
 			<div className="flex flex-col gap-6">
-				<div className="relative h-26 w-full">
-					<div className="size-full rounded-md bg-linear-to-br from-blue-500 via-blue-300 to-blue-500" />
+				<div className="relative h-24 w-full">
+					<div className="size-full rounded-md bg-linear-to-br from-sky-700 via-sky-400 to-blue-700" />
 				</div>
 				<div className="relative">
 					<div className="absolute -top-14 left-3">
@@ -146,9 +146,13 @@ export function Profile({
 						<FeaturedSong trackUrl={SPOTIFY_TRACK_URL} />
 					</div>
 				</div>
-				<div className="scrollbar-hidden -mt-2 flex h-60 flex-col gap-4 overflow-y-auto px-1 pb-1">
-					<DetailsSection title="Personal Details" items={personalDetails} />
-					<DetailsSection title="Links" items={links} />
+				<div className="scrollbar-hidden -mx-2 -mt-2 -mb-1 flex h-62 flex-col gap-4 overflow-y-auto px-2 pb-1">
+					<DetailsSection
+						title="Personal Details"
+						items={personalDetails}
+						className="px-1.5"
+					/>
+					<DetailsSection title="Links" items={links} className="px-1.5" />
 				</div>
 			</div>
 		</div>
