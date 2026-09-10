@@ -80,7 +80,8 @@ export function FeaturedSong({ trackUrl }: FeaturedSongProps) {
 			href={trackUrl}
 			rel="noreferrer"
 			target="_blank"
-			className="flex items-center justify-between gap-2 rounded-md border border-neutral-700 p-2 text-sm font-medium transition-colors hover:bg-neutral-800"
+			className="flex items-center justify-between gap-2 rounded-md border border-neutral-700 px-3 py-2 text-sm font-medium transition-colors hover:bg-neutral-800"
+			title={`${trackUrl}`}
 		>
 			<div className="flex items-center gap-2">
 				<div className="relative size-8 shrink-0 overflow-hidden rounded-md">

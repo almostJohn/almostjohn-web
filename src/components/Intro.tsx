@@ -1,7 +1,7 @@
 export function Intro() {
 	return (
 		<div className="flex flex-col gap-2">
-			<h1 className="text-2xl font-bold">
+			<h1 className="text-2xl font-bold tracking-tighter">
 				👋 Hey, I'm <span className="text-blue-500">John</span>!
 			</h1>
 			<p className="text-sm leading-relaxed text-pretty">
