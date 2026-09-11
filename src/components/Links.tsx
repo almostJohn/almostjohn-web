@@ -48,7 +48,7 @@ const links: Link[] = [
 
 export function Links() {
 	return (
-		<div className="flex flex-col gap-1">
+		<div className="flex flex-col gap-2">
 			<h2 className="text-sm font-semibold text-neutral-600">Links</h2>
 			<div className="flex flex-wrap items-center gap-4">
 				{links.map((link, index) => (
@@ -56,6 +56,7 @@ export function Links() {
 						key={index}
 						href={link.href}
 						className="inline-flex items-center justify-center gap-2 border border-neutral-300 bg-neutral-200 px-2 py-1 text-xs font-medium whitespace-nowrap"
+						aria-label={link.label}
 					>
 						{link.icon}
 						{link.label}

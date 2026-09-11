@@ -66,11 +66,14 @@ export function Projects() {
 	return (
 		<div className="flex flex-col gap-2">
 			<h2 className="text-sm font-semibold text-neutral-600">Projects</h2>
-			<div className="flex flex-col gap-2 divide-y divide-neutral-300">
+			<div className="flex flex-col gap-4">
 				{projectItems.map((project, index) => {
 					if (!project.href) {
 						return (
-							<div key={index} className="flex flex-col gap-4 pb-4">
+							<div
+								key={index}
+								className="flex flex-col gap-4 border-b border-neutral-300 pb-4 last:border-b-0"
+							>
 								<div className="flex items-center gap-2">
 									<p className="text-lg font-bold tracking-tight">
 										{project.title}
@@ -115,7 +118,7 @@ export function Projects() {
 						<a
 							key={index}
 							href={project.href}
-							className="group flex flex-col pb-4"
+							className="group flex flex-col border-b border-neutral-300 pb-4 last:border-b-0"
 							rel="noreferrer"
 							target="_blank"
 						>
