@@ -16,7 +16,7 @@ export default function HomePage() {
 				self-taught software engineer and designer based in Philippines,
 				building web-systems and side projects.
 			</p>
-			<div className="mt-6 flex w-full flex-col gap-1 md:max-w-md">
+			<div className="mt-6 flex w-full flex-col gap-2 md:max-w-md">
 				<h2 className="text-sm font-semibold text-neutral-600">
 					Featured Song
 				</h2>
