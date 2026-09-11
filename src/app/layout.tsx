@@ -1,7 +1,8 @@
+import { SiteHeader } from "@/components/SiteHeader";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import { cn } from "@/util/cn";
-import { inter } from "@/util/fonts";
+import { openSans } from "@/util/fonts";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
@@ -23,16 +24,6 @@ export const metadata: Metadata = {
 		"full stack web dev",
 	],
 	authors: [{ name: siteConfig.creator, url: siteConfig.url }],
-
-	icons: {
-		other: [
-			{
-				url: "/almostjohn-web-icon.png",
-				sizes: "32x32",
-				type: "image/png",
-			},
-		],
-	},
 
 	openGraph: {
 		siteName: siteConfig.name,
@@ -56,11 +47,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-neutral-900 text-neutral-100 antialiased",
-					inter.className,
+					"bg-neutral-50 text-sm text-neutral-900 antialiased",
+					openSans.className,
 				)}
 			>
-				<main className="flex min-h-svh flex-col">{children}</main>
+				<div className="flex min-h-svh flex-col p-6 md:p-10">
+					<SiteHeader />
+					{children}
+				</div>
 			</body>
 		</html>
 	);

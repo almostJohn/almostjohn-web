@@ -1,4 +1,4 @@
-import { Inter, Sanchez } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 
 export const inter = Inter({
 	display: "swap",
@@ -6,9 +6,8 @@ export const inter = Inter({
 	variable: "--font-inter",
 });
 
-export const sanchez = Sanchez({
+export const openSans = Open_Sans({
 	display: "swap",
 	subsets: ["latin"],
-	variable: "--font-sanchez",
-	weight: ["400"],
+	variable: "--font-open-sans",
 });

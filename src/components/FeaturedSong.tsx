@@ -59,12 +59,12 @@ export function FeaturedSong({ trackUrl }: FeaturedSongProps) {
 
 	if (isLoading) {
 		return (
-			<div className="flex animate-pulse items-center justify-between gap-2 rounded-md bg-neutral-800 p-3">
+			<div className="flex animate-pulse items-center justify-between gap-2 bg-neutral-200 p-3">
 				<div className="flex items-center gap-2">
-					<div className="size-8 shrink-0 animate-pulse rounded-md bg-neutral-900" />
+					<div className="size-8 shrink-0 animate-pulse bg-neutral-400" />
 					<div className="flex flex-col gap-1">
-						<div className="h-3 w-35 animate-pulse rounded-md bg-neutral-900" />
-						<div className="h-4 w-25 animate-pulse rounded-md bg-neutral-900" />
+						<div className="h-3 w-35 animate-pulse bg-neutral-400" />
+						<div className="h-4 w-25 animate-pulse bg-neutral-400" />
 					</div>
 				</div>
 			</div>
@@ -80,11 +80,11 @@ export function FeaturedSong({ trackUrl }: FeaturedSongProps) {
 			href={trackUrl}
 			rel="noreferrer"
 			target="_blank"
-			className="flex items-center justify-between gap-2 rounded-md border border-neutral-700 px-3 py-2 text-sm font-medium transition-colors hover:bg-neutral-800"
+			className="flex items-center justify-between gap-2 border border-neutral-300 bg-neutral-200 px-3 py-2 text-sm font-medium"
 			title={`${trackUrl}`}
 		>
-			<div className="flex items-center gap-2">
-				<div className="relative size-8 shrink-0 overflow-hidden rounded-md">
+			<div className="flex items-center gap-3">
+				<div className="relative size-8 shrink-0 overflow-hidden ring-2 ring-neutral-400">
 					<Image
 						src={track.thumbnail_url}
 						alt={track.title}
