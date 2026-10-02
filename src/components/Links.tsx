@@ -5,7 +5,7 @@ import {
 	SiInstagram as Instagram,
 	SiX as X,
 } from "@icons-pack/react-simple-icons";
-import { Send } from "lucide-react";
+import { Heart, Send } from "lucide-react";
 
 type Link = {
 	label: string;
@@ -23,6 +23,11 @@ const links: Link[] = [
 		label: "GitHub",
 		href: "https://github.com/almostJohn",
 		icon: <GitHub className="size-3 shrink-0" />,
+	},
+	{
+		label: "Sponsor My Work",
+		href: "https://github.com/sponsors/almostJohn",
+		icon: <Heart className="size-3 shrink-0" />,
 	},
 	{
 		label: "Twitter",
@@ -57,6 +62,8 @@ export function Links() {
 						href={link.href}
 						className="inline-flex items-center justify-center gap-2 border border-neutral-300 bg-neutral-200 px-2 py-1 text-xs font-medium whitespace-nowrap"
 						aria-label={link.label}
+						rel="noreferrer"
+						target="_blank"
 					>
 						{link.icon}
 						{link.label}
