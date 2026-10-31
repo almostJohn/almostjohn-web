@@ -1,8 +1,8 @@
 export const siteConfig = {
-	name: "almostJohn",
+	name: "John Gale Garcia",
 	title: {
-		default: "almostJohn",
-		template: "%s | almostJohn",
+		default: "John Gale Garcia",
+		template: "%s | John Gale Garcia",
 	},
 	url:
 		process.env.NODE_ENV === "production"

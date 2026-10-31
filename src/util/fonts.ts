@@ -1,13 +1,13 @@
-import { Inter, Open_Sans } from "next/font/google";
+import { JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
 
-export const inter = Inter({
+export const fontSans = Schibsted_Grotesk({
 	display: "swap",
 	subsets: ["latin"],
-	variable: "--font-inter",
+	variable: "--font-sans",
 });
 
-export const openSans = Open_Sans({
+export const fontMono = JetBrains_Mono({
 	display: "swap",
 	subsets: ["latin"],
-	variable: "--font-open-sans",
+	variable: "--font-mono",
 });

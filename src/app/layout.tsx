@@ -1,8 +1,7 @@
-import { SiteHeader } from "@/components/SiteHeader";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import { cn } from "@/util/cn";
-import { openSans } from "@/util/fonts";
+import { fontSans } from "@/util/fonts";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
@@ -47,14 +46,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-neutral-50 text-sm text-neutral-900 antialiased",
-					openSans.className,
+					"bg-neutral-950 text-white antialiased",
+					fontSans.className,
 				)}
 			>
-				<div className="flex min-h-svh flex-col p-6 md:p-10">
-					<SiteHeader />
-					{children}
-				</div>
+				<div className="flex min-h-svh flex-col">{children}</div>
 			</body>
 		</html>
 	);
