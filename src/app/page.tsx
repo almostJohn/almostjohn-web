@@ -1,5 +1,3 @@
-import { cn } from "@/util/cn";
-import { fontMono } from "@/util/fonts";
 import {
 	SiFacebook as FacebookIcon,
 	SiGithub as GitHubIcon,
@@ -117,13 +115,7 @@ export default function HomePage() {
 				</div>
 			</div>
 			{/* content */}
-			<div className="mx-auto mt-3 flex min-h-screen max-w-xl flex-col px-4 pb-10 sm:px-0">
-				<div className="mb-6 grid gap-1">
-					<p className="text-3xl font-bold tracking-tight">John Gale Garcia</p>
-					<p className={cn("text-sm text-neutral-500", fontMono.className)}>
-						Software Engineer • Philippines
-					</p>
-				</div>
+			<div className="mx-auto flex min-h-screen max-w-xl flex-col px-4 pb-10 sm:px-0">
 				<p className="mb-6 w-full text-sm leading-relaxed text-pretty text-neutral-400">
 					I'm a 26 y/o software engineer based in the Philippines. I love
 					building things and solving problems. I enjoy language design and web
@@ -180,6 +172,7 @@ export default function HomePage() {
 									key={project.title}
 									href={project.href}
 									rel="nooponer noreferrer"
+									target="_blank"
 									className="group inline-flex items-center justify-between py-1 transition-colors hover:bg-neutral-800"
 								>
 									<div className="flex min-w-0 flex-col">
