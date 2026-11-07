@@ -1,5 +1,5 @@
+import type * as React from "react";
 import { cn } from "@/util/cn";
-import * as React from "react";
 
 export function Container({
 	className,
