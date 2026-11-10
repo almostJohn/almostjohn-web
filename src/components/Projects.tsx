@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import { Section } from "@/components/Section";
 
 type Project = {
 	title: string;
@@ -64,59 +63,69 @@ const projects: Project[] = [
 
 export function Projects() {
 	return (
-		<Section
-			id="projects"
-			sectionTitle="projects"
-			sectionDescription="take a look at some of the projects I have worked on."
-		>
-			<div className="flex flex-col divide-y divide-neutral-800">
-				{projects.map((project) => {
-					if (!project.href) {
-						return (
-							<div
-								key={project.title}
-								className="py-1.5 transition-colors hover:bg-neutral-800"
-							>
-								<div className="flex min-w-0 flex-col gap-1">
-									<div className="flex items-center gap-2">
-										<p className="text-sm font-medium underline underline-offset-4">
-											{project.title}
-										</p>
-										<span className="pointer-events-none inline-flex items-center justify-center border border-neutral-600 bg-neutral-700 px-1.5 py-0.5 text-xs font-medium whitespace-nowrap select-none">
-											Private
-										</span>
-									</div>
-									<p className="text-sm leading-relaxed text-neutral-500">
-										{project.description}
-									</p>
-								</div>
-							</div>
-						);
-					}
-
+		<div className="flex flex-col divide-y divide-neutral-800">
+			{projects.map((project) => {
+				if (!project.href) {
 					return (
-						<a
-							key={project.href}
-							href={project.href}
-							rel="noopener noreferrer"
-							target="_blank"
-							className="group flex items-center justify-between py-1.5 transition-colors hover:bg-neutral-800"
+						<div
+							key={project.title}
+							className="flex items-center justify-between py-3"
 						>
 							<div className="flex min-w-0 flex-col gap-1">
-								<p className="text-sm font-medium underline underline-offset-4">
-									{project.title}
-								</p>
-								<p className="text-sm leading-relaxed text-neutral-500">
+								<div className="flex items-center gap-2">
+									<p className="text-sm font-medium">{project.title}</p>
+									<div className="inline-flex items-center justify-center bg-neutral-800 px-2 py-0.5 text-xs font-medium whitespace-nowrap">
+										Private
+									</div>
+								</div>
+								<p className="text-sm leading-relaxed text-neutral-400">
 									{project.description}
 								</p>
+								<div className="flex flex-wrap items-center gap-2">
+									{project.techStack.map((stack) => (
+										<span
+											key={stack}
+											className="inline-flex items-center justify-center bg-neutral-800 px-2 py-0.5 font-mono text-xs font-medium"
+										>
+											{stack}
+										</span>
+									))}
+								</div>
 							</div>
-							<div className="mr-4">
-								<ArrowUpRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
-							</div>
-						</a>
+						</div>
 					);
-				})}
-			</div>
-		</Section>
+				}
+
+				return (
+					<a
+						key={project.title}
+						href={project.href}
+						rel="noopener noreferrer"
+						target="_blank"
+						className="group flex items-center justify-between py-3"
+					>
+						<div className="flex min-w-0 flex-col gap-1">
+							<p className="text-sm font-medium">{project.title}</p>
+							<p className="text-sm leading-relaxed text-neutral-400">
+								{project.description}
+							</p>
+							<div className="flex flex-wrap items-center gap-2">
+								{project.techStack.map((stack) => (
+									<span
+										key={stack}
+										className="inline-flex items-center justify-center bg-neutral-800 px-2 py-0.5 font-mono text-xs font-medium"
+									>
+										{stack}
+									</span>
+								))}
+							</div>
+						</div>
+						<div className="mr-4">
+							<ArrowUpRight className="size-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+						</div>
+					</a>
+				);
+			})}
+		</div>
 	);
 }

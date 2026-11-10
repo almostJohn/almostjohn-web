@@ -13,3 +13,7 @@
 		display: none;
 	}
 }
+
+.section-heading {
+	@apply text-xl font-bold tracking-tight;
+}
