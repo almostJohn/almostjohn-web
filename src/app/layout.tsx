@@ -2,9 +2,8 @@ import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
-import { Navbar } from "@/components/Navbar";
 import { cn } from "@/util/cn";
-import { fontMono } from "@/util/fonts";
+import { fontSans } from "@/util/fonts";
 
 export const metadata: Metadata = {
 	title: siteConfig.title,
@@ -47,14 +46,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"bg-neutral-900 text-white antialiased",
-					fontMono.className,
+					"bg-neutral-900 text-neutral-100 antialiased",
+					fontSans.className,
 				)}
 			>
-				<div className="relative flex min-h-svh flex-col">
-					<Navbar />
-					{children}
-				</div>
+				<div className="relative flex min-h-svh flex-col">{children}</div>
 			</body>
 		</html>
 	);
