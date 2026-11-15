@@ -3,20 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 type Project = {
 	title: string;
 	href?: string;
-	isPrivate?: boolean;
 	description: string;
 	techStack: string[];
 };
-
-const FULLSTACK = [
-	"next.js",
-	"react",
-	"tailwindcss",
-	"postgresql",
-	"neon",
-	"drizzle-orm",
-];
-const LANDING_PAGE = ["next.js", "react", "tailwindcss"];
 
 const projects: Project[] = [
 	{
@@ -24,40 +13,60 @@ const projects: Project[] = [
 		href: "https://app-tsconfig.vercel.app",
 		description:
 			"Generate clean, opinionated tsconfig.json setups for modern TypeScript projects.",
-		techStack: ["next.js", "react", "tailwindcss"],
+		techStack: ["next.js", "react", "tailwindcss", "typescript"],
 	},
 	{
 		title: "servant-advertising-web",
-		isPrivate: true,
 		description:
-			"System ERP Admin for servant advertising graphic and printing design shop",
-		techStack: FULLSTACK,
+			"System ERP Admin for servant advertising graphic and printing design shop.",
+		techStack: [
+			"next.js",
+			"react",
+			"tailwindcss",
+			"postgresql",
+			"neon",
+			"drizzle-orm",
+			"typescript",
+		],
 	},
 	{
 		title: "app-workspace-web",
-		isPrivate: true,
 		description:
 			"A workspace system admin app built with Next.js, TypeScript and Tailwind CSS.",
-		techStack: FULLSTACK,
+		techStack: [
+			"next.js",
+			"react",
+			"tailwindcss",
+			"postgresql",
+			"neon",
+			"drizzle-orm",
+			"typescript",
+		],
 	},
 	{
 		title: "servant-projects-web",
-		isPrivate: true,
 		description:
 			"Servant projects web system for basically tracking work progress.",
-		techStack: FULLSTACK,
+		techStack: [
+			"next.js",
+			"react",
+			"tailwindcss",
+			"postgresql",
+			"neon",
+			"drizzle-orm",
+			"typescript",
+		],
 	},
 	{
 		title: "servant-ads-landing",
 		href: "https://servantadvertising.com",
 		description: "Servant Advertising landing page.",
-		techStack: LANDING_PAGE,
+		techStack: ["next.js", "react", "tailwindcss", "resend", "typescript"],
 	},
 	{
 		title: "online-invitation-web",
-		isPrivate: true,
 		description: "Online web invitation for birthday debut.",
-		techStack: ["react", "vite", "tailwindcss"],
+		techStack: ["react", "vite", "tailwindcss", "typescript"],
 	},
 ];
 
